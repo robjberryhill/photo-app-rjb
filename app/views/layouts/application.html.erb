@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navigation/navigation_bar" %>
+    <div class="container mt-4">
+      <%= yield %>
+    </div>
   </body>
 </html>
