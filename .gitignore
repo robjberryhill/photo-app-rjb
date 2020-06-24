@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+.info-secret
+/.info-secret
+
 .history
 /.history
 
