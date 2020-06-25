@@ -23,8 +23,6 @@
 .nav.navbar-right {
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 10px;
-  padding-top: 5px;
 }
 
 .nav.navbar-nav {
@@ -44,14 +42,20 @@
   li a {
     margin-right: 5px;
   }
+}
 
+.nav.navbar-right {
+  li {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
 }
 
 .nav.navbar-right li {
 
   .btn {
     color: #fff !important;
-    margin-top: 5%;
   }
 
   .btn-danger:hover, .btn-danger:focus {
@@ -66,4 +70,42 @@
 
 .btn-primary:visited, .btn-danger:visited {
   color: #fff;
+}
+
+.features {
+  ul {
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: asset-url('home-banner-one.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Helvetica Neue' !important;
+  font-stretch: expanded;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+
+}
+
+.plans {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.listing {
+  list-style: none;
+  padding-left: 0;
 }
