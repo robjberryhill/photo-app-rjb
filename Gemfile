@@ -7,9 +7,11 @@ ruby "2.6.1"
 gem "rails", "~> 6.0.3"
 
 # Flexible authentication solution for Rails with Warden
-gem 'devise'
+gem "devise"
 # Add bootstrap and devise bootstrap view.
 gem "devise-bootstrap-views"
+
+gem "font-awesome-rails"
 
 # Use Puma as the app server
 gem "puma", "~> 4.1"

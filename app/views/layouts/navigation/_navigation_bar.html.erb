@@ -1,29 +1,39 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "PhotoApp", root_path, class: "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+    <%= link_to "PhotoApp", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "My Friends", "#", class: "nav-link" %>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-right col-md-4 ml-auto">
+          <% if current_user %>
+
+            <li class="col-md-8 user-name">
+              <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+            </li>
+
+            <li class="col-md-1">&nbsp;</li>
+
+            <li class="col-md-3 logout">
+              <%= link_to 'Logout', destroy_user_session_path, class: 'btn btn-sm btn-danger', title: 'Logout', method: :delete %>
+            </li>
+
+          <% else %>
+
+            <li class="col-md-4 pull-right">
+              <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In' %>
+            </li>
+
+          <% end %>
+        </ul>
+      </div>
 </nav>

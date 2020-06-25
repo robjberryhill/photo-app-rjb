@@ -11,7 +11,10 @@
 
   <body>
     <%= render "layouts/navigation/navigation_bar" %>
-    <div class="container mt-4">
+    <div class="col-6 mt-5 mx-auto">
+      <%= render "layouts/alerts/alerts"%>
+    </div>
+    <div class="container col-6 mt-4">
       <%= yield %>
     </div>
   </body>
