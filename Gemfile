@@ -11,6 +11,8 @@ gem "devise"
 # Add bootstrap and devise bootstrap view.
 gem "devise-bootstrap-views"
 
+gem "stripe"
+
 gem "font-awesome-rails"
 
 # Use Puma as the app server

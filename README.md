@@ -8,3 +8,7 @@ Things you may want to cover:
   - `config/environment.rb`
   - `config/environments/development.rb`
   - `config/environments/production.rb`
+
+- Add Stripe to Sign Up:
+  - `Gemfile`
+  - `config/initializers/stripe.rb`
