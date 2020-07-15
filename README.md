@@ -12,3 +12,5 @@ Things you may want to cover:
 - Add Stripe to Sign Up:
   - `Gemfile`
   - `config/initializers/stripe.rb`
+  - `app/models/payment.rb`
+  - `app/views/devise/registrations/new.html.erb`

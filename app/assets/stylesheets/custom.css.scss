@@ -109,3 +109,13 @@
   list-style: none;
   padding-left: 0;
 }
+
+.expires-container {
+  display: flex;
+
+  select {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
