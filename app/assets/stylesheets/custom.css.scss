@@ -119,3 +119,37 @@
     }
   }
 }
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card-container {
+    margin-top: 15px;
+    opacity: 1;
+    width: 25%;
+    transition: opacity 0.3s ease-in-out;
+
+    &:not(:nth-child(4n)) {
+      padding-right: 15px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .image-container {
+      height: 200px;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

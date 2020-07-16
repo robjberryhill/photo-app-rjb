@@ -2,8 +2,6 @@
 
 `Upgrades for dependencies not supported`
 
-Things you may want to cover:
-
 - Add Sendgrid to:
   - `config/environment.rb`
   - `config/environments/development.rb`
@@ -14,3 +12,4 @@ Things you may want to cover:
   - `config/initializers/stripe.rb`
   - `app/models/payment.rb`
   - `app/views/devise/registrations/new.html.erb`
+  - `app/controllers/registrations_controller.rb`

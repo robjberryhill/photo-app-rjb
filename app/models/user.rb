@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   # Allows for attributes for other tables. To save attributes on associated records through the parent
   accepts_nested_attributes_for :payment
+  has_many :images
 end
