@@ -13,3 +13,12 @@
   - `app/models/payment.rb`
   - `app/views/devise/registrations/new.html.erb`
   - `app/controllers/registrations_controller.rb`
+
+- Add an Image Uploader
+  - `Gemfile`
+    - `gem "carrierwave"`
+    - `gem "fog"`
+    - `gem "mini_magick"`
+  - `app/uploaders/picture_uploader.rb`
+  - In `app/models/image.rb`
+    - `mount_uploader :picture, PictureUploader`

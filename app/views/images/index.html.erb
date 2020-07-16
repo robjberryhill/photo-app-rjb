@@ -2,20 +2,11 @@
 
 <h1>Images</h1>
 <%= link_to 'Create New Image', new_image_path %>
+
 <hr/>
+
 <div class="images-container">
   <% @images.each do |image| %>
-    <%= link_to image_path(image), class: "card-container" do %>
-      <div class="card">
-        <div class="image-container">
-          <%= image_tag image.picture.url, alt: image.name if image.picture %>
-        </div>
-
-        <div class="card-body">
-          <h5><%= image.name %></h5>
-          <p class="card-text"><%= image.user.email %></p>
-        </div>
-      </div>
-    <% end %>
+    <%= render "image_card", image: image %>
   <% end %>
 </div>

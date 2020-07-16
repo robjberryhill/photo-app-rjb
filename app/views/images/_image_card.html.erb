@@ -1,0 +1,12 @@
+<%= link_to image_path(image), class: "card-container" do %>
+  <div class="card">
+    <div class="image-container">
+      <%= image_tag image.picture.url, alt: image.name if image.picture %>
+    </div>
+
+    <div class="card-body">
+      <h5><%= image.name %></h5>
+      <p class="card-text"><%= image.user.email %></p>
+    </div>
+  </div>
+<% end %>

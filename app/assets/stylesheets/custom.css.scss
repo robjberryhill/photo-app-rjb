@@ -120,6 +120,33 @@
   }
 }
 
+.card {
+  .image-container {
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.image-show {
+  text-align: center;
+
+  hr {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
 .images-container {
   display: flex;
   flex-direction: row;
@@ -143,13 +170,6 @@
 
     .image-container {
       height: 200px;
-      width: 100%;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
     }
   }
 }

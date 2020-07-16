@@ -18,10 +18,20 @@
 
   <div class="form-group">
     <%= form.label :picture %>
-    <%= form.file_field :picture, accept: '.jpg, .gif, .png', class: "form-control-file" %>
+    <%= form.file_field :picture, accept: '.jpg, .jpeg, .gif, .png', class: "form-control-file" %>
   </div>
 
   <div class="form-group">
     <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $("#image_picture").bind("change", function() {
+    var sizeInMB = this.files[0].size/1024/1024;
+
+    if (sizeInMB > 5) {
+      alert("Maximum files size is 5MB");
+    }
+  });
+</script>
